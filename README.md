@@ -1,4 +1,4 @@
-# ### Introduction
+# Introduction
 The objectives of this Web API application to create a easy configurable and reusable application for logging and exception handling in the database or csv file or both according to your business needs.  
 
 ### Environment  
