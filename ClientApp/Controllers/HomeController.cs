@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 
-namespace test.Controllers
+namespace LoggingApp.Controllers
 {
     [LoggingExceptionProcessorAttribute(ApplicationName = "test")]
     [LoggingMessageProcessorAttribute(ApplicationName = "test")]
