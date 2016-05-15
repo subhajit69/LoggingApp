@@ -6,10 +6,10 @@ using System.Web;
 using System.Web.Mvc;
 
 
-namespace LoggingApp.Controllers
+namespace ClientApp.Controllers
 {
-    [LoggingExceptionProcessorAttribute(ApplicationName = "test")]
-    [LoggingMessageProcessorAttribute(ApplicationName = "test")]
+    [LoggingExceptionProcessorAttribute(ApplicationName = "ClientApp")]
+    [LoggingMessageProcessorAttribute(ApplicationName = "ClientApp")]
     public class HomeController : Controller
     {
         LoggingMessageProcessorAttribute ins = new LoggingMessageProcessorAttribute();
@@ -18,10 +18,7 @@ namespace LoggingApp.Controllers
             
             try
             {
-                ins.ApplicationName = "LoggingApp";
-                ins.ApplicationName = "LoggingApp";
-                ins.ApplicationName = "LoggingApp";
-                 ins.ApplicationName = "LoggingApp";
+                 ins.ApplicationName = "ClientApp";
                  int j = 0;
                  int i = GetRes();
                  ins.RequestLogging(this.ControllerContext);
@@ -29,7 +26,6 @@ namespace LoggingApp.Controllers
             }
             catch (Exception ex)
             {
-                //return View("Error");
                 throw ex;
             }
         }
