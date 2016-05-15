@@ -1,4 +1,4 @@
-﻿using LoggingApp.Models;
+using ClientApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
