@@ -41,34 +41,41 @@
 <a id="configuring-loggingapp" class="anchor" href="#configuring-loggingapp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring LoggingApp</h3>
 
 <p><strong>Step 1:</strong><br>
-  Download and unzip the project files.<br>
-<strong>Step 2:</strong><br>
-  change MsgLoggingFIlePath and dbLogConnection values to your desired file logging path and database connection string.<br>
-<strong>Step 3:</strong><br>
-  Run the script file DBScript.sql to your database for [dbo].[tblExceptionLog] and  [dbo].[tblMessageLog] table creation.<br>
-<strong>Step 4:</strong><br>
-  Host LoggingApp to the IIS server and note down the hosting url.<br>
-<strong>Step 5:</strong><br>
-  Copy and Paste LoggingProcessor.cs file from ClientApp folder to your project folder for which you need logging message and exception. Change the namespace ClientApp accordingly.<br>
-<strong>Step 6:</strong><br>
-  Copy and paste Constant.cs file to your project folder and change the namespace ClientApp accordingly.<br>
-<strong>Step 7:</strong>  </p>
+  Download and unzip the project files.  </p>
+
+<p><strong>Step 2:</strong><br>
+  change <code>MsgLoggingFIlePath</code> and <code>dbLogConnection</code> values to your desired file logging path and database connection string.</p>
+
+<p><strong>Step 3:</strong><br>
+  Run the script file <code>DBScript.sql</code> to your database for <code>[dbo].[tblExceptionLog]</code> and  <code>[dbo].[tblMessageLog]</code> table creation. </p>
+
+<p><strong>Step 4:</strong><br>
+  Host <code>LoggingApp</code> to the IIS server and note down the hosting url.  </p>
+
+<p><strong>Step 5:</strong><br>
+  Copy and Paste <code>LoggingProcessor.cs</code> file from ClientApp folder to your project folder for which you need logging message and exception. Change the namespace <code>ClientApp</code> accordingly.  </p>
+
+<p><strong>Step 6:</strong><br>
+  Copy and paste <code>Constant.cs</code> file to your project folder and change the namespace <code>ClientApp</code> accordingly.  </p>
+
+<p><strong>Step 7:</strong>  </p>
 
 <ul>
-<li>Add the following appSettings lines to your projects app setting folder. Change "http://localhost:18235/" part of MessageLoggingApiUrl and ExceptionLoggingApiUrl value to your LoggingApp hosting url.<br>
+<li>Add the following appSettings lines to your projects app setting folder. Change <code>http://localhost:18235/</code> part of <code>MessageLoggingApiUrl</code> and <code>ExceptionLoggingApiUrl</code> value to your LoggingApp hosting url.<br>
 </li>
-<li>LoggingTypeValue value can be either of DB/File/All for logging in database or csv file or both place
+<li>LoggingTypeValue value can be either of DB/File/All for logging in database or csv file or both place<br>
 <code>&lt;add key="MessageLoggingApiUrl" value="http://localhost:18235/api/LogData/LoggingData"/&gt;
 &lt;add key="ExceptionLoggingApiUrl" value="http://localhost:18235/api/LogData/LoggingExceptionData"/&gt;
 &lt;add key="loggingTypeValue" value="All"/&gt;</code><br>
-<strong>Step 8:</strong><br>
+</li>
+</ul>
+
+<p><strong>Step 8:</strong>  </p>
 
 <ul>
 <li>In the HomeController.cs the sample code is provided for logging message and exception through LoggingExceptionProcessor and LoggingMessageProcessor attribute.<br>
 </li>
 <li>RequestLogging and RequestExceptionLogging method can also be called for logging message and exception from required places creating instance LoggingMessageProcessorAttribute and LoggingExceptionProcessorAttribute class respectively.<br>
-</li>
-</ul>
 </li>
 </ul>
 
