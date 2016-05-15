@@ -40,31 +40,32 @@
 <h3>
 <a id="configuring-loggingapp" class="anchor" href="#configuring-loggingapp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring LoggingApp</h3>
 
-<p>Step 1:<br>
+<p><strong>Step 1:</strong><br>
   Download and unzip the project files.<br>
-Step 2:<br>
+<strong>Step 2:</strong><br>
   change MsgLoggingFIlePath and dbLogConnection values to your desired file logging path and database connection string.<br>
-Step 3:<br>
+<strong>Step 3:</strong><br>
   Run the script file DBScript.sql to your database for [dbo].[tblExceptionLog] and  [dbo].[tblMessageLog] table creation.<br>
-Step 4:<br>
+<strong>Step 4:</strong><br>
   Host LoggingApp to the IIS server and note down the hosting url.<br>
-Step 5:<br>
+<strong>Step 5:</strong><br>
   Copy and Paste LoggingProcessor.cs file from ClientApp folder to your project folder for which you need logging message and exception. Change the namespace ClientApp accordingly.<br>
-Step 6:<br>
+<strong>Step 6:</strong><br>
   Copy and paste Constant.cs file to your project folder and change the namespace ClientApp accordingly.<br>
-Step 7:  </p>
+<strong>Step 7:</strong>  </p>
 
 <ul>
 <li>Add the following appSettings lines to your projects app setting folder. Change "http://localhost:18235/" part of MessageLoggingApiUrl and ExceptionLoggingApiUrl value to your LoggingApp hosting url.<br>
 </li>
 <li>LoggingTypeValue value can be either of DB/File/All for logging in database or csv file or both place
-
-
-<br>
-Step 8:<br>
+<code>&lt;add key="MessageLoggingApiUrl" value="http://localhost:18235/api/LogData/LoggingData"/&gt;
+&lt;add key="ExceptionLoggingApiUrl" value="http://localhost:18235/api/LogData/LoggingExceptionData"/&gt;
+&lt;add key="loggingTypeValue" value="All"/&gt;</code><br>
+<strong>Step 8:</strong><br>
 
 <ul>
-<li>In the HomeController.cs the sample code is provided for logging message and exception through LoggingExceptionProcessor and LoggingMessageProcessor attribute. </li>
+<li>In the HomeController.cs the sample code is provided for logging message and exception through LoggingExceptionProcessor and LoggingMessageProcessor attribute.<br>
+</li>
 <li>RequestLogging and RequestExceptionLogging method can also be called for logging message and exception from required places creating instance LoggingMessageProcessorAttribute and LoggingExceptionProcessorAttribute class respectively.<br>
 </li>
 </ul>
