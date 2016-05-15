@@ -8,8 +8,8 @@ using System.Web.Mvc;
 
 namespace ClientApp.Controllers
 {
-    [LoggingExceptionProcessorAttribute(ApplicationName = "ClientApp")]
-    [LoggingMessageProcessorAttribute(ApplicationName = "ClientApp")]
+    [LoggingExceptionProcessor(ApplicationName = "ClientApp")]
+    [LoggingMessageProcessor(ApplicationName = "ClientApp")]
     public class HomeController : Controller
     {
         LoggingMessageProcessorAttribute ins = new LoggingMessageProcessorAttribute();
