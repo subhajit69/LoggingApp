@@ -38,7 +38,7 @@ The objectives of this Web API application to create a easy configurable and reu
   * `RequestLogging` and `RequestExceptionLogging` method can also be called for logging message and exception from required places creating instance `LoggingMessageProcessorAttribute` and `LoggingExceptionProcessorAttribute` class respectively.  
 
 ### Authors and Contributors
-Find my profile in GitHub Subhajit Ray, (@subhajit69)
+Find my profile in GitHub, Subhajit Ray, https://github.com/subhajit69
 
 ### Support or Contact
 Having trouble with configuration? Drop a mail to subhajit.ray69@gmail.com
