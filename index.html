@@ -49,9 +49,9 @@ Step 3:<br>
 Step 4:<br>
   Host LoggingApp to the IIS server and note down the hosting url.<br>
 Step 5:<br>
-  Copy and Paste LoggingProcessor.cs file from ClientApp folder to your project folder for which you need logging message and exception. Change the namespace ClientApp accordingly.
+  Copy and Paste LoggingProcessor.cs file from ClientApp folder to your project folder for which you need logging message and exception. Change the namespace ClientApp accordingly.<br>
 Step 6:<br>
-  Copy and paste Constant.cs file to your project folder and change the namespace ClientApp accordingly.
+  Copy and paste Constant.cs file to your project folder and change the namespace ClientApp accordingly.<br>
 Step 7:  </p>
 
 <ul>
@@ -60,6 +60,14 @@ Step 7:  </p>
 <li>LoggingTypeValue value can be either of DB/File/All for logging in database or csv file or both place
 
 
+<br>
+Step 8:<br>
+
+<ul>
+<li>In the HomeController.cs the sample code is provided for logging message and exception through LoggingExceptionProcessor and LoggingMessageProcessor attribute. </li>
+<li>RequestLogging and RequestExceptionLogging method can also be called for logging message and exception from required places creating instance LoggingMessageProcessorAttribute and LoggingExceptionProcessorAttribute class respectively.<br>
+</li>
+</ul>
 </li>
 </ul>
 
