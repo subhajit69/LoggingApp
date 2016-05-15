@@ -9,7 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace test
+namespace ClientApp
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false)]
     public class LoggingMessageProcessorAttribute : FilterAttribute, IActionFilter
