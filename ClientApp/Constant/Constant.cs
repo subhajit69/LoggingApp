@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace test
+namespace LoggingApp
 {
     public class Constant
     {
         public static string MessageLoggingApiUrl = "MessageLoggingApiUrl";
         public static string ExceptionLoggingApiUrl = "ExceptionLoggingApiUrl";
         public static string LoggingType = "LoggingType";
-        public static string loggingTypeValue = "loggingTypeValue";
+        public static string loggingTypeValue = "LoggingTypeValue";
         public static string CSV = ".csv";
         public static string DB = "DB";
         public static string File = "File";
